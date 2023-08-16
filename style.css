@@ -1,0 +1,90 @@
+/*------------------------------*/
+/*    reseting for a website    */
+/*------------------------------*/
+
+/* box sizing */
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+/* removing margin */
+
+p,
+picture,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+}
+
+/* font Weight */
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    font-weight: 400;
+}
+
+/* body reserting */
+
+body {
+    scroll-behavior: smooth;
+    font-family: var(--ff-sans-cond);
+    font-size: var(--fs-400);
+    color: hsl(var(--color-white));
+    /* use this background for design file only */
+    background-color: hsl(var(--color-dark));
+    min-height: 100vh;
+    line-height: 1.5;
+    display: grid;
+    overflow-x: hidden;
+    grid-template-rows: min-content 1fr;
+}
+
+
+/* image reseting */
+
+figure,
+image,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* font inheriting */
+input,
+blockquote,
+textarea,
+button,
+select {
+    font: inherit;
+}
+
+/* 
+removing scrolling feature for people one who turn them off 
+ in the website and as well as in os level*/
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        /* !important attribute is having more specificit than id and inline styling */
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
